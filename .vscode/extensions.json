@@ -2,9 +2,6 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "EditorConfig.EditorConfig",
-    "aaron-bond.better-comments",
-    "Gruntfuggly.todo-tree"
+    "bradlc.vscode-tailwindcss"
   ]
 }

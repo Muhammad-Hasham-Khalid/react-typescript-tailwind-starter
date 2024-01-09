@@ -1,4 +1,4 @@
-import '@total-typescript/ts-reset';
+import '@total-typescript/ts-reset/dom';
 
 /*
 NOTE: Do not add any other lines of code in this file!
