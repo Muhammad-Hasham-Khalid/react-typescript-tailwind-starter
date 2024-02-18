@@ -10,7 +10,7 @@
 - [Configuration](#configuration)
 - [Scripts](#scripts)
 - [Linting and Formatting](#linting-and-formatting)
-- [Environment Variables](#environment-variables)
+- [Environment Variables](#typesafe-environment-variables)
 - [Contributing](#contributing)
 - [License](#license)
 
