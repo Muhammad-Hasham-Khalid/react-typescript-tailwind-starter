@@ -1,44 +1,17 @@
 {
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.sortImports": "explicit"
   },
-  "editor.inlayHints.padding": true,
-  "editor.inlayHints.fontSize": 12,
   "editor.semanticHighlighting.enabled": true,
   "editor.linkedEditing": true,
-  "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.tabSize": 2,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "files.exclude": {
-    "**/node_modules": true
-  },
-  "files.associations": {
-    ".env*": "env",
-    "*.css": "tailwindcss"
-  },
 
   // TailwindCSS
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
   },
-
-  // JavaScript
-  "javascript.referencesCodeLens.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.inlayHints.parameterNames.enabled": "literals",
-
-  // TypeScript
-  "typescript.referencesCodeLens.enabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.inlayHints.parameterNames.enabled": "literals",
 
   // Prettier
   "prettier.requireConfig": true
