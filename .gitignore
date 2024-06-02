@@ -22,3 +22,11 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+!.env.sample
+.env
+.env.*
+
+# Tanstack Router codegen
+src/routeTree.gen.ts
