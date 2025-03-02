@@ -12,6 +12,7 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    name: Run ESLint
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,6 +23,7 @@ jobs:
   
   format:
     runs-on: ubuntu-latest
+    name: Run Prettier check
     steps:
       - uses: actions/checkout@v4
         with:
