@@ -50,7 +50,7 @@ cd react-typescript-tailwind-starter
 
 #### Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 ### Usage
@@ -61,7 +61,7 @@ cp .env.local .env.sample
 
 #### Start the dev server
 ```bash
-npm run start:dev
+pnpm dev
 ```
 Visit [http://localhost:5173](http://localhost:5173) in your browser to see the app.
 
@@ -70,9 +70,9 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser to see the 
 - There is a default ```extensions.json``` in the ```.vscode``` folder with some recommended extensions which you can also change as per your requirements.
 
 ### Scripts
-- ```start:dev```: Run the vite development server.
-- ```build:prod```: Build the project for production.
-- ```start:prod```: Start the project in production mode.
+- ```dev```: Run the vite development server.
+- ```build```: Build the project for production.
+- ```start```: Start the project in production mode.
 - ```build:staging```: Build the project in staging mode (uses .env.staging for the environment).
 - ```start:staging```: Start the project in staging mode.
 - ```lint```: Run linting on your project (for more details see the [Linting and Formatting](#linting-and-formatting) section)
