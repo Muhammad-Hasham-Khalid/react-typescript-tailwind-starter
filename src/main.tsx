@@ -4,7 +4,6 @@ import { RouterProvider, createRouter } from '@tanstack/react-router';
 import { type AxiosError } from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import { routeTree } from './routeTree.gen';
 
 const router = createRouter({ routeTree });
@@ -22,7 +21,9 @@ declare module '@tanstack/react-query' {
   }
 }
 
-document.title = import.meta.env.VITE_APP_TITLE;
+if (import.meta.env.VITE_APP_TITLE) {
+  document.title = import.meta.env.VITE_APP_TITLE;
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

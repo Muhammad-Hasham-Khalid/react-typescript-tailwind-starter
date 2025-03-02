@@ -9,10 +9,13 @@ import { env } from './src/env';
 
 export default defineConfig(async ({ mode }) => {
   const loadedEnv = loadEnv(mode, __dirname, '');
-  const { PORT } = await env.parseAsync(loadedEnv).catch((error) => {
+
+  try {
+    await env.parseAsync(loadedEnv);
+  } catch (error) {
     if (error instanceof ZodError) console.error(error.flatten().fieldErrors);
     throw new Error('❌ Invalid environment variables:');
-  });
+  }
 
   const svgrOptions: VitePluginSvgrOptions = {
     svgrOptions: {
@@ -38,6 +41,5 @@ export default defineConfig(async ({ mode }) => {
       TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
     ],
     build: { outDir: 'build' },
-    server: { port: PORT },
   };
 });
