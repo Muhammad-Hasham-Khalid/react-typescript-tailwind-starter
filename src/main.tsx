@@ -1,10 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
-import type { AxiosError } from 'axios';
+import { type AxiosError } from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 
 import { routeTree } from './routeTree.gen';
 
@@ -26,14 +25,16 @@ declare module '@tanstack/react-query' {
 document.title = import.meta.env.VITE_APP_TITLE;
 
 const rootElement = document.getElementById('root');
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools />
-      </QueryClientProvider>
-    </React.StrictMode>,
-  );
+if (!rootElement) {
+  throw new Error('Root element not found');
 }
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      {import.meta.env.DEV ? <ReactQueryDevtools /> : null}
+    </QueryClientProvider>
+  </React.StrictMode>,
+);

@@ -1,5 +1,6 @@
-import { TanStackRouterVite } from '@tanstack/router-vite-plugin';
-import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
+import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 import svgr, { type VitePluginSvgrOptions } from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -20,8 +21,22 @@ export default defineConfig(async ({ mode }) => {
     },
   };
 
+  const compilerConfig = {
+    target: '19',
+  };
+
   return {
-    plugins: [react(), tsconfigPaths(), svgr(svgrOptions), TanStackRouterVite()],
+    plugins: [
+      tailwindcss(),
+      react({
+        babel: {
+          plugins: [['babel-plugin-react-compiler', compilerConfig]],
+        },
+      }),
+      tsconfigPaths(),
+      svgr(svgrOptions),
+      TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
+    ],
     build: { outDir: 'build' },
     server: { port: PORT },
   };

@@ -24,7 +24,7 @@ This project is a great place to start your react + typescript project, it uses 
 - **Tailwind CSS:** Quickly style your components with the utility-first CSS framework.
 - **Prettier and ESLint:** Ensure consistent code style and formatting using ```eslint``` and ```prettier```.
 - **Typesafe Environment Variables:** Handling and validation of environment variables using Zod.
-- **Lint-staged and Commitlint:** Enforce code quality and consistent commit messages.
+- **Commitlint:** Enforce consistent commit messages.
 
 ## Getting Started
 ### Prerequisites

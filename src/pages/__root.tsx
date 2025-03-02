@@ -9,7 +9,7 @@ function RootRoute() {
       <div className="grid h-screen w-full place-items-center bg-zinc-800 text-white">
         <Outlet />
       </div>
-      <TanStackRouterDevtools />
+      {import.meta.env.DEV ? <TanStackRouterDevtools /> : null}
     </>
   );
 }
