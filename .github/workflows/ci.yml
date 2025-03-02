@@ -19,6 +19,7 @@ jobs:
           fetch-depth: 0
       - uses: ./.github/actions/setup
 
+      - run: pnpm tsr:generate
       - run: pnpm lint
   
   format:
@@ -40,4 +41,5 @@ jobs:
           fetch-depth: 0
       - uses: ./.github/actions/setup
 
+      - run: pnpm tsr:generate
       - run: pnpm typecheck

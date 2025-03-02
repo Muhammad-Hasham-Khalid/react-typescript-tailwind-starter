@@ -15,7 +15,7 @@
     "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx,json,css} index.html --ignore-unknown --no-error-on-unmatched-pattern",
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css} index.html --ignore-unknown --no-error-on-unmatched-pattern",
     "tsr:watch": "tsr watch",
-    "tsr:gen": "tsr generate",
+    "tsr:generate": "tsr generate",
     "typecheck": "tsc"
   },
   "dependencies": {
